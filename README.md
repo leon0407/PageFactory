@@ -1,2 +1,2 @@
 # yxtUI
-my web front-end module and plugins used in my company
+my web front-end modules and plugins used in my company
