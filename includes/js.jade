@@ -1,0 +1,25 @@
+script(type='text/javascript',src='js/jquery.min.js')
+script(type='text/javascript',src='js/SuperSlide.2.1.1.js')
+script(type='text/javascript',src='js/slider.js')
+script.
+    // superslider
+    $(".banner-box").slide({
+        titCell:".hd ul",
+        mainCell:".bd ul",
+        effect:"fold",
+        interTime:3500,
+        delayTime:500,
+        autoPlay:true,
+        autoPage:true, 
+        trigger:"click" 
+    });
+    //简单的图片轮转插件
+    $("#slider1").MaxSlider({
+         elementclass: "slider-item",
+         easing: "swing",
+         time: 3000,
+         speed: 1000,
+         autoscroll: false,
+         btnpre: $("#btn-prev"), 
+         btnnext: $("#btn-next")
+    });

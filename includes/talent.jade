@@ -1,0 +1,17 @@
+mixin avatar
+	.avatar-wrap
+		img.avatar(src='css/images/avatar.png')
+		img.avatar-mask(src='css/images/avatar-mask.png')
+ul.talent-list
+	- for (var i = 0; i < 2; i++)
+			li
+				a(href="")
+					+ avatar
+				.talent-profile
+					a(href="").gray3
+						p.mt10.mb10 项少龙
+					p.fz12.gray6.mb10 部门：
+						span.text-trim.dept
+							产品开发
+					p.fz12.gray6 学分：
+						span 100

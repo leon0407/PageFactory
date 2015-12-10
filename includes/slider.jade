@@ -1,0 +1,21 @@
+.slider-wrap
+	.slider-list-wrap
+		ul#slider1.slider-list
+			li.slider-item
+				ul.slider-item-sublist
+					- for(var i=0;i<5;i++)
+						li
+							a(href="")
+								img(src="", alt="")
+							a(href="").gray3
+								h4.mt10 标题标题标题标题#{i+1}
+			li.slider-item
+				ul.slider-item-sublist
+					- for(var i=5;i<8;i++)
+						li
+							a(href="")
+								img(src="", alt="")
+							a(href="").gray3
+								h4.mt10 标题标题标题标题#{i+1}
+	span#btn-prev.btn-prev
+	span#btn-next.btn-next
