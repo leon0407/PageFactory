@@ -1,0 +1,26 @@
+.course-list{
+  overflow: hidden;
+  li{
+    float: left;
+    width: @course-img-width;
+    & + li{margin-left: @course-item-spacing;}
+    img{
+        width: @course-img-width;
+        height: @course-img-height;
+        display: block;
+    }
+    .course-caption{
+        .vertical-middle(@course-caption-height);            
+    }
+    .course-caption-overlap{
+        text-indent: @course-caption-overlap-indent;
+        position: relative;
+        z-index: 2;
+        top: -@course-caption-height;
+        margin-bottom: -@course-caption-height;
+        background-color: @course-caption-overlap-bgcolor;
+        filter: alpha(opacity=@course-caption-overlap-bgopacity);
+        background:@course-caption-overlap-bg;
+    }
+  }
+}

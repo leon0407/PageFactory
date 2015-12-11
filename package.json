@@ -21,6 +21,7 @@
     "grunt-contrib-jade": "^0.15.0",
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-less": "^1.1.0",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-copy": "^0.1.0"
   }
 }

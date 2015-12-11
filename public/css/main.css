@@ -280,11 +280,70 @@ i {
 }
 .page a:hover {
   text-decoration: underline;
-  color: #336699;
+  color: #369;
 }
 .page-center {
   width: 1000px;
   margin: 0 auto;
+}
+.page-search {
+  position: relative;
+  float: right;
+}
+.page-search .search-input {
+  float: left;
+  width: 338px;
+  height: 44px;
+  line-height: 44px;
+  border: 1px solid #ddd;
+  border-right: none;
+  text-indent: 20px;
+  background: #fff;
+  outline: 0;
+  font-family: Microsoft YaHei;
+}
+.page-search .btn-search {
+  float: left;
+  width: 74px;
+  height: 46px;
+  border: none;
+  cursor: pointer;
+}
+.page-search .btn-search-text {
+  line-height: 46px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #fff;
+  background: red;
+  font-family: Microsoft YaHei;
+}
+.nav-bar {
+  background: #3388ff;
+  overflow: hidden;
+}
+.nav-list li {
+  float: left;
+}
+.nav-list li + li {
+  margin-left: 10px;
+}
+.nav-list li a {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+.nav-list li.active a,
+.nav-list li:hover a {
+  background-color: #b30c0c;
+  border-bottom: none;
+  text-decoration: none;
+  color: #fff;
 }
 /* superslide */
 .banner-box {
@@ -348,6 +407,48 @@ i {
 }
 .banner-box .hd ul li.on {
   background: url('images/icon.png') no-repeat -21px -290px;
+}
+.slider-wrap {
+  position: relative;
+}
+.slider-list-wrap {
+  width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slider-list {
+  position: relative;
+}
+.slider-item {
+  float: left;
+  width: 850px;
+}
+.slider-item-sublist li {
+  width: 150px;
+  float: left;
+  margin: 0 10px;
+}
+.slider-item-sublist li img {
+  width: 150px;
+  height: 150px;
+}
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  margin-top: -12.5px;
+  width: 14px;
+  display: block;
+}
+.btn-prev {
+  background: url('images/icon.png') no-repeat -6px -567px;
+  left: 0;
+}
+.btn-next {
+  background: url('images/icon.png') no-repeat -6px -567px;
+  right: 0;
 }
 .category {
   width: 250px;
@@ -452,109 +553,6 @@ i {
 .subcategory-item ul li span {
   color: #999;
 }
-.slider-wrap {
-  position: relative;
-}
-.slider-list-wrap {
-  width: 850px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.slider-list {
-  position: relative;
-}
-.slider-item {
-  float: left;
-  width: 850px;
-}
-.slider-item-sublist li {
-  width: 150px;
-  float: left;
-  margin: 0 10px;
-}
-.slider-item-sublist li img {
-  width: 150px;
-  height: 150px;
-}
-.btn-prev,
-.btn-next {
-  cursor: pointer;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  margin-top: -12.5px;
-  width: 14px;
-  display: block;
-}
-.btn-prev {
-  background: url('images/icon.png') no-repeat -6px -567px;
-  left: 0;
-}
-.btn-next {
-  background: url('images/icon.png') no-repeat -6px -567px;
-  right: 0;
-}
-/* search */
-.page-search {
-  position: relative;
-  float: right;
-}
-.page-search .search-input {
-  float: left;
-  width: 338px;
-  height: 44px;
-  line-height: 44px;
-  border: 1px solid #dddddd;
-  border-right: none;
-  text-indent: 20px;
-  background: #ffffff;
-  outline: 0;
-  font-family: Microsoft YaHei;
-}
-.page-search .btn-search {
-  float: left;
-  width: 74px;
-  height: 46px;
-  border: none;
-  cursor: pointer;
-}
-.page-search .btn-search-text {
-  line-height: 46px;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 3px;
-  color: #ffffff;
-  background: #ff0000;
-  font-family: Microsoft YaHei;
-}
-/* nav */
-.nav-bar {
-  background: #3388ff;
-  overflow: hidden;
-}
-.nav-list li {
-  float: left;
-}
-.nav-list li + li {
-  margin-left: 10px;
-}
-.nav-list li a {
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  font-size: 16px;
-  color: #ffffff;
-  display: block;
-  cursor: pointer;
-}
-.nav-list li.active a,
-.nav-list li:hover a {
-  background-color: #b30c0c;
-  border-bottom: none;
-  text-decoration: none;
-  color: #ffffff;
-}
 .course-list {
   overflow: hidden;
 }
@@ -580,11 +578,10 @@ i {
   z-index: 2;
   top: -30px;
   margin-bottom: -30px;
-  background-color: #000000;
+  background-color: #000;
   filter: alpha(opacity=50);
   background: rgba(0, 0, 0, 0.5);
 }
-/* avatar */
 .avatar-wrap {
   position: relative;
   width: 64px;
@@ -599,7 +596,6 @@ i {
   top: 0;
   left: 0;
 }
-/* talent */
 .talent-list {
   overflow: hidden;
 }
@@ -609,7 +605,6 @@ i {
 .talent-list li + li {
   margin-left: 30px;
 }
-/* footer */
 .page-footer {
   padding: 20px 0;
   font-size: 12px;

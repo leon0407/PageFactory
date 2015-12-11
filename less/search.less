@@ -1,0 +1,31 @@
+.page-search{
+  position: relative;
+  float: right;
+  .search-input{
+      float: left;
+      width: @search-input-width;
+      .vertical-middle(@search-input-height);
+      border: @search-input-border-width solid @search-input-border-color;
+      border-right: none;
+      text-indent: @search-input-indent;
+      background: @search-input-bg;
+      outline: 0;
+      font-family: Microsoft YaHei;        
+  }
+  .btn-search{
+      float: left;
+      width: @btn-search-width;
+      height: @search-input-height+@search-input-border-width*2;
+      border: none;
+      cursor: pointer;
+  }
+  .btn-search-text{        
+      line-height: @search-input-height+@search-input-border-width*2;
+      text-align: center;
+      font-size: @btn-search-fontsize;
+      letter-spacing: @btn-search-fontspacing;
+      color: @btn-search-fontcolor;
+      background: @btn-search-bg;
+      font-family: Microsoft YaHei;
+  }
+}

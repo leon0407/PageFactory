@@ -15,9 +15,6 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
-      },
-      less:{
-      	files: ['less/*.less']
       }
     },
 
@@ -28,7 +25,7 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          'css/main.css': 'less/main.less'
+          'public/css/main.css': 'less/main.less'
         }
       }
     },
@@ -39,10 +36,17 @@ module.exports = function(grunt) {
           pretty: true
         },
         files: {
-          'main.html': 'main.jade'
+          'public/main.html': 'main.jade'
         }
       }
-    },    
+    },
+
+    jshint: {
+      grunt: {
+        src: ['Gruntfile.js']
+      },
+      js: 'public/js/*.js'
+    },
 
     concurrent: {
       tasks: ['watch', 'jade', 'less'],
@@ -50,16 +54,16 @@ module.exports = function(grunt) {
         logConcurrentOutput: true
       }
     }
-  })
+  });
 
-  grunt.loadNpmTasks('grunt-contrib-watch')  
-  grunt.loadNpmTasks('grunt-contrib-jade')
-  grunt.loadNpmTasks('grunt-contrib-less')
-  grunt.loadNpmTasks('grunt-concurrent')
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-less'); 
+  grunt.loadNpmTasks('grunt-concurrent');
 
+  grunt.option('force', false);
 
-  grunt.option('force', true)
+  grunt.registerTask('default', ['concurrent']);
 
-  grunt.registerTask('default', ['concurrent'])
-
-}
+};

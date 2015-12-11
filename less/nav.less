@@ -1,0 +1,25 @@
+.nav-bar{
+  background: @nav-bar-bg;
+  overflow: hidden;     
+}
+.nav-list li{
+  float: left;
+  & + li {margin-left: @nav-list-li-spacing;}  
+  a{          
+      .both-center(@nav-list-li-a-height);  
+      padding: 0 @nav-list-li-a-paddingleftright;                
+      font-size: @nav-list-li-a-fontsize; 
+      color: @nav-list-li-a-color;
+      display: block;
+      cursor: pointer;
+  }
+  &.active,
+  &:hover{
+      a{
+          background-color: @nav-list-li-activehover-a-bg;
+          border-bottom: @nav-list-li-activehover-a-border;
+          text-decoration: none; 
+          color: @nav-list-li-activehover-a-color;     
+      }
+  }    
+}

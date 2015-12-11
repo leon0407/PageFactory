@@ -1,29 +1,24 @@
 doctype html
 html(lang='en')
 	head
-		meta(charset='utf-8')
-		title 项仁亚的定制页面
-		link(rel="stylesheet", href="css/font-awesome.css")
-		link(rel="stylesheet", href="css/main.css")
+		include ./jade/head.jade
 	body
 		.page
 			// header
-			include ./includes/header.jade
+			include ./jade/header.jade
 			// nav
-			include ./includes/nav.jade
+			include ./jade/nav.jade
 			// banner
-			include ./includes/banner.jade
+			include ./jade/banner.jade
 			// category
-			include ./includes/category.jade
+			include ./jade/category.jade
 			// slider
-			include ./includes/slider.jade
+			include ./jade/slider.jade
 			// course
-			include ./includes/course.jade	
+			include ./jade/course.jade
 			// rank
-			include ./includes/talent.jade
+			include ./jade/talent.jade
 			// footer
-			include ./includes/footer.jade
+			include ./jade/footer.jade
 		// js
-		include ./includes/js.jade
-			
-
+		include ./jade/js.jade
