@@ -14,3 +14,7 @@
 -	jade、less：编译html、css
 -	watch：实时观察文件修改，编译过程
 -	concurrent：多任务同时运行
+
+2015-12-23
+
+新增标签切换：tab.jade、tab.less、tab.js

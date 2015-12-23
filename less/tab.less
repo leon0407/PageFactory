@@ -1,0 +1,17 @@
+.tab-default{
+	li{
+		float: left;
+		width: 33.333333%;
+		.vertical-middle(30px);
+		box-sizing: border-box;
+		text-align: center;
+		color: #333;
+		background: #efefef;
+		cursor: pointer;
+		& + li{border-left: 1px solid #ddd;}
+		&.active{
+			background: red;
+			color: #fff;
+		}
+	}
+}

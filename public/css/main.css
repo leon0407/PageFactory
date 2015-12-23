@@ -347,7 +347,7 @@ i {
 }
 /* superslide */
 .banner-box {
-  width: 100%;
+  width: 500px;
   height: 350px;
   position: relative;
   overflow: hidden;
@@ -552,6 +552,23 @@ i {
 }
 .subcategory-item ul li span {
   color: #999;
+}
+.tab-default li {
+  float: left;
+  width: 33.333333%;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #333;
+  background: #efefef;
+}
+.tab-default li + li {
+  border-left: 1px solid #ddd;
+}
+.tab-default li.active {
+  background: red;
+  color: #fff;
 }
 .course-list {
   overflow: hidden;

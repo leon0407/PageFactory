@@ -23,3 +23,18 @@ script.
          btnpre: $("#btn-prev"), 
          btnnext: $("#btn-next")
     });
+    // 标签切换：兼容IE8
+    $(".tab").click(function(e){
+        var $target = $(e.target);
+        if($target.hasClass("active")) return;
+        $target.addClass("active").siblings().removeClass("active");
+        var len = $(this).children("li").length;
+        var idx = 0;
+        for(var i = 0;i < len; i++){
+            if($target[0] == $(this).children("li:eq('" + i + "')")[0]){
+                idx = i;
+                break;
+            }
+        }
+        $(this).next(".tabcon").find(">li:eq('" + idx +"')").show().siblings().hide();
+    });

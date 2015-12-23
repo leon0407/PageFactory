@@ -179,6 +179,17 @@
           </ul>
         </div><span id="btn-prev" class="btn-prev">previous</span><span id="btn-next" class="btn-next">next</span>
       </div>
+      <!-- tab-->
+      <ul class="tab tab-default">
+        <li class="active">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+      </ul>
+      <ul class="tabcon">
+        <li>tabcon1</li>
+        <li class="off">tabcon2</li>
+        <li class="off">tabcon3</li>
+      </ul>
       <!-- course-->
       <ul class="course-list">
         <li><a href=""><img src="" alt=""></a><a href="" class="gray3">
@@ -192,7 +203,7 @@
       <ul class="talent-list">
         <li><a href="">
             <div class="avatar-wrap"><img src="css/images/avatar.png" class="avatar"><img src="css/images/avatar-mask.png" class="avatar-mask"></div></a>
-          <div class="talent-profile"><a href="" class="gray3">
+          <div class="fl talent-profile"><a href="" class="gray3">
               <p class="mt10 mb10">项仁亚</p></a>
             <p class="fz12 gray6 mb10">部门：<span class="text-trim dept">产品开发</span></p>
             <p class="fz12 gray6">学分：<span>100</span></p>
@@ -200,7 +211,7 @@
         </li>
         <li><a href="">
             <div class="avatar-wrap"><img src="css/images/avatar.png" class="avatar"><img src="css/images/avatar-mask.png" class="avatar-mask"></div></a>
-          <div class="talent-profile"><a href="" class="gray3">
+          <div class="fl talent-profile"><a href="" class="gray3">
               <p class="mt10 mb10">项仁亚</p></a>
             <p class="fz12 gray6 mb10">部门：<span class="text-trim dept">产品开发</span></p>
             <p class="fz12 gray6">学分：<span>100</span></p>
@@ -210,9 +221,7 @@
       <!-- footer-->
       <div class="page-footer">
         <p class="mb10">&copy;2015.ylly.com.All rights reserved&nbsp;云学堂&nbsp;版权所有&nbsp;苏ICP备10023489号-1</p>
-        <p><a href="">云学堂</a>&nbsp;提供技术支持&nbsp;&nbsp;<a href="">服务协议</a>&nbsp;&nbsp;<a href="">帮助中心</a>
-          <400-0707-218></400-0707-218>
-        </p>
+        <p><a href="">云学堂</a>&nbsp;提供技术支持&nbsp;&nbsp;<a href="">服务协议</a>&nbsp;&nbsp;<a href="">帮助中心</a>&nbsp;400-0707-218</p>
       </div>
     </div>
     <!-- js-->
@@ -240,6 +249,21 @@
            autoscroll: false,
            btnpre: $("#btn-prev"), 
            btnnext: $("#btn-next")
+      });
+      // 标签切换：兼容IE8
+      $(".tab").click(function(e){
+          var $target = $(e.target);
+          if($target.hasClass("active")) return;
+          $target.addClass("active").siblings().removeClass("active");
+          var len = $(this).children("li").length;
+          var idx = 0;
+          for(var i = 0;i < len; i++){
+              if($target[0] == $(this).children("li:eq('" + i + "')")[0]){
+                  idx = i;
+                  break;
+              }
+          }
+          $(this).next(".tabcon").find(">li:eq('" + idx +"')").show().siblings().hide();
       });
     </script>
   </body>
