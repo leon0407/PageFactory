@@ -3,14 +3,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       html: {
-        files: ['main.jade'],
+        files: ['jade/*.jade'],
         tasks: ['jade'],
         options: {
           livereload: true
         }
       },
       css: {
-        files: ['less/main.less'],
+        files: ['less/*.less'],
         tasks: ['less'],
         options: {
           livereload: true
@@ -41,13 +41,6 @@ module.exports = function(grunt) {
       }
     },
 
-    jshint: {
-      grunt: {
-        src: ['Gruntfile.js']
-      },
-      js: 'public/js/*.js'
-    },
-
     concurrent: {
       tasks: ['watch', 'jade', 'less'],
       options: {
@@ -56,12 +49,9 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-contrib-less'); 
-  grunt.loadNpmTasks('grunt-concurrent');
-
+  ['grunt-contrib-watch','grunt-contrib-jade','grunt-contrib-less','grunt-concurrent'].forEach(function(task){
+    grunt.loadNpmTasks(task);
+  });
   grunt.option('force', false);
 
   grunt.registerTask('default', ['concurrent']);
