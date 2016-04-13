@@ -3,19 +3,19 @@ ul.category
 	- for (var i = 0; i < 3; i++)
 		li.category-item
 			p.category-caption
-				a(href="") 父类
+				a(href="") 父类父类
 			.border-mask
 			p.category-child
 				- for (var j = 0; j < 3; j++)
-					a(href="") 子类
+					a(href="") 子类子类
 			ul.subcategory
 				- for (var k = 0; k < 3; k++)
 					li.subcategory-item
 						p
-							a(href="") 子类
+							a(href="") 子类子类
 							span (15)
 						ul
 							- for (var m = 0; m < 3; m++)
 								li
-									a(href="") 孙类
+									a(href="") 孙类孙类
 									span (8)

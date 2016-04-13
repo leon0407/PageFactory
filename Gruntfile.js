@@ -52,7 +52,6 @@ module.exports = function(grunt) {
   ['grunt-contrib-watch','grunt-contrib-jade','grunt-contrib-less','grunt-concurrent'].forEach(function(task){
     grunt.loadNpmTasks(task);
   });
-  grunt.option('force', false);
 
   grunt.registerTask('default', ['concurrent']);
 
